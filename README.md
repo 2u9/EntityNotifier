@@ -1,3 +1,3 @@
-# DonkeyNotifier
+# EntityNotifier
 
-Notifies you when a donkey or horse is loaded
+Notifies you when entities are loaded

@@ -1,11 +1,11 @@
 {
-  "name": "DonkeyNotifier",
-  "version": "1.0.0",
+  "name": "EntityNotifier",
+  "version": "2.0.0",
   "authors": ["NepNep21"],
-  "description": "Notifies you about donkeys",
-  "url": "https://github.com/NepNep21/DonkeyNotifier",
+  "description": "Notifies you about entities",
+  "url": "https://github.com/NepNep21/EntityNotifier",
   "min_api_version": "2.05.01",
   "required_plugins": [],
-  "main_class": "me.nepnep.donkeynotifier.DonkeyNotifierPlugin",
+  "main_class": "me.nepnep.entitynotifier.EntityNotifierPlugin",
   "hot_reload": true
 }
