@@ -52,13 +52,14 @@ object EntityNotifier : PluginModule(
         }
     }
 
-    private fun Class<out Entity>.shouldNotify(): Boolean {
-        return (donkeys && this == EntityDonkey::class.java)
-            || (horses && this == EntityHorse::class.java)
-            || (ghasts && this == EntityGhast::class.java)
-            || (sheep && this == EntitySheep::class.java)
-            || (cows && this == EntityCow::class.java)
-            || (villagers && this == EntityVillager::class.java)
+    private fun Class<out Entity>.shouldNotify() = when (this) {
+        EntityDonkey::class.java -> donkeys
+        EntityHorse::class.java -> horses
+        EntityGhast::class.java -> ghasts
+        EntitySheep::class.java -> sheep
+        EntityCow::class.java -> cows
+        EntityVillager::class.java -> villagers
+        else -> false
     }
 
     private fun Class<out Entity>.getSound(): PositionedSoundRecord {
