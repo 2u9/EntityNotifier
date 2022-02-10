@@ -60,7 +60,7 @@ object EntityNotifier : PluginModule(
                         mc.soundHandler.playSound(clazz.getSound())
                     }
                     if (sendMessage) {
-                        MessageSendHelper.sendChatMessage("${entityEntry.name} loaded at ${packet.x} ${packet.y} ${packet.z}")
+                        MessageSendHelper.sendChatMessage("${entityEntry.name} loaded at ${"%.2f %.2f %.2f".format(packet.x, packet.y, packet.z)}")
                     }
                 }
             }
@@ -104,7 +104,7 @@ object EntityNotifier : PluginModule(
                     if (amount >= deadBodyAmount) {
                         notified = true
                         mc.soundHandler.playSound(PositionedSoundRecord.getRecord(SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP, 1f, 1f))
-                        MessageSendHelper.sendChatMessage("Dead body with $amount valuable items found at $posX $posY $posZ")
+                        MessageSendHelper.sendChatMessage("Dead body with $amount valuable items found at ${"%.2f %.2f %.2f".format(posX, posY, posZ)}")
                     }
                 }
             }
