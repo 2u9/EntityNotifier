@@ -1,11 +1,10 @@
 {
   "name": "EntityNotifier",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "authors": ["NepNep21"],
   "description": "Notifies you about entities",
   "url": "https://github.com/NepNep21/EntityNotifier",
-  "min_api_version": "2.05.01",
+  "min_api_version": "3.1",
   "required_plugins": [],
-  "main_class": "me.nepnep.entitynotifier.EntityNotifierPlugin",
-  "hot_reload": true
+  "main_class": "me.nepnep.entitynotifier.EntityNotifierPlugin"
 }

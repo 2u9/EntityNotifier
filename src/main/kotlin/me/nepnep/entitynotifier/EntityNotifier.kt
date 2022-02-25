@@ -7,7 +7,7 @@ import com.lambda.client.util.TickTimer
 import com.lambda.client.util.TimeUnit
 import com.lambda.client.util.text.MessageSendHelper
 import com.lambda.client.util.threads.safeListener
-import com.lambda.event.listener.listener
+import com.lambda.client.event.listener.listener
 import net.minecraft.block.Block
 import net.minecraft.client.audio.PositionedSoundRecord
 import net.minecraft.entity.Entity
