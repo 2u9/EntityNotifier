@@ -39,6 +39,8 @@ object EntityNotifier : PluginModule(
     private val playSound by setting("Play sound", true)
     private val sendMessage by setting("Send message", true)
     private val donkeys by setting("Donkeys", true)
+    private val llamas by setting("Llamas", true)
+    private val mules by setting("Mules", true)
     private val horses by setting("Horses", false)
     private val ghasts by setting("Ghasts", false)
     private val sheep by setting("Sheep", false)
@@ -123,6 +125,8 @@ object EntityNotifier : PluginModule(
 
     private fun Class<out Entity>.shouldNotify() = when (this) {
         EntityDonkey::class.java -> donkeys
+        EntityLlama::class.java -> llamas
+        EntityMule::class.java -> mules
         EntityHorse::class.java -> horses
         EntityGhast::class.java -> ghasts
         EntitySheep::class.java -> sheep
@@ -133,6 +137,8 @@ object EntityNotifier : PluginModule(
 
     private fun Class<out Entity>.getSound() = when (this) {
         EntityDonkey::class.java -> SoundEvents.ENTITY_DONKEY_DEATH
+        EntityLlama::class.java -> SoundEvents.ENTITY_LLAMA_DEATH
+        EntityMule::class.java -> SoundEvents.ENTITY_DONKEY_DEATH
         EntityHorse::class.java -> SoundEvents.ENTITY_HORSE_DEATH
         EntityGhast::class.java -> SoundEvents.ENTITY_GHAST_DEATH
         EntitySheep::class.java -> SoundEvents.ENTITY_SHEEP_DEATH
